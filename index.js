@@ -13,6 +13,7 @@ const { examroute } = require('./routes/examrouter');
 const { quizroute } = require('./routes/quizrouter');
 const { paymentroute } = require('./routes/paymentcontroller');
 const {logoRoutes} = require("./routes/ShowLogoRoutes");
+const { BannerRoutes } = require('./routes/BannerRoutes');
 const app = express();
 app.use(cors());
 
@@ -27,13 +28,13 @@ app.use("/",examroute);
 app.use("/",quizroute)
 app.use("/",paymentroute)
 app.use("/",logoRoutes);
-
+app.use("/",BannerRoutes);
 app.use(errhandler)
 
 app.use("/",async(req,res)=>{
   res.send("<h1>Welcomesd to the server refreshed 20-7</h1>");
 });
 
-app.listen(8082, () => {
-    console.log('Server started on port - 8082');
+app.listen(2000, () => {
+    console.log('Server started on port - 2000');
   });

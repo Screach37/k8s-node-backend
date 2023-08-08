@@ -12,11 +12,11 @@ const knex = require("../db");
 var student_login = async (req,res,next) => {
  
       const data = req.body;
-      console.log(data.email);
+      console.log("hello",data.email);
       
   
-      const query = await knex("students").select('*').where('enrollment_id', data.email).first()
-      console.log(query);
+      const query = await knex("students").select('*').where('enrollment_id', data.email).first();
+      console.log("hello",query);
   
       if (!query) {
         console.log("heloo")
