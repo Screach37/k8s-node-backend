@@ -3,7 +3,7 @@ const jwt= require("jsonwebtoken");
 const crypto = require('crypto');
 const  nodemailer  = require('nodemailer');
 
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt.js');
 const moment = require('moment');
 const { trycatch } = require("../error_handler/try_catch_handler");
 const knex = require("../db");
@@ -126,11 +126,7 @@ currentTimestamp+=twoMinutesInMilliseconds;
             message:"email sent"})
             }
         });
-    
-    
-    
-    
-    
+
 }
 await sendmail();
    
@@ -182,8 +178,6 @@ var forgetpass3=async(req,res,next)=>{
         else{
             return next(new createerr("password is not matching",400))
         }
-       
-
 
 }
 

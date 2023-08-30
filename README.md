@@ -4,12 +4,12 @@ Arise LMS Backend (Nodejs)
 create .env on deployment
 env variables
 
-db_name=
+db_name= 
 
-db_hostname=localhost
+db_hostname=
 
 db_password=
 
-db_user=
+db_user = 
 
 secret_key=fbvslfgbvlhvbsvjbfkvbshvfsdbvfhbvsdvbsdjhvbshj
